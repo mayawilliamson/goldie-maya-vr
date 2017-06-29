@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-asset>
+                <img id='background' src='images/greenspace.jpg'>
+                <img id="calmimg" src='images/calm.png'>
+                <img id='stressed' src='images/stressedd.png'>
+                <img id='angry' src='images/angry.png'>
+                <img id='happy' src='images/happy.png'>
+                <img id="snow" src="images/snow-house.jpg" />
+            </a-asset>
+              <a-camera position="0 2 4">
+                <a-cursor color="#ffffff" fuse="true" timeout="10"></a-cursor>
+            </a-camera>
+            <a-sky id='sky' src='#background'></a-sky>
+            <a-text position="-2.9 4 -5" value="How Are You Feeling?" color="white" width="14" height="10"></a-text>
+            <a-sphere id='calm-sphere' material="src:#calmimg" rotation="0 -84 0" color="white" radius="2" position= "4 0 -16"> </a-sphere>
+            <a-sphere id='stressed-sphere' material="src:#stressed" rotation="0 -125 0" color="white" radius="2" position= "11.5 -1 -15"> </a-sphere>
+            <a-sphere id='angry-sphere' material="src:#angry" rotation="0 -56 0" color="white" radius="2" position= "-4 0 -16"> </a-sphere>
+            <a-sphere id='happy-sphere' material="src:#happy" rotation="0 -45 0" color="white" radius="2" position= "-11 -1 -15"> </a-sphere>
+        </a-scene>
+        
+        <script>
+            document.getElementById('calm-sphere').addEventListener('click', function(){
+                document.getElementById('sky').setAttribute('src', '#')
+            })
+            document.getElementById('stressed-sphere').addEventListener('click', function(){
+                document.getElementById('sky').setAttribute('src', '#')
+            }) 
+            document.getElementById('angry-sphere').addEventListener('click', function(){
+                document.getElementById('sky').setAttribute('src', '#')
+            }) 
+            document.getElementById('happy-sphere').addEventListener('click', function(){
+                document.getElementById('sky').setAttribute('src', '#')
+            })             
+        </script>
+    </body>
+</html>
